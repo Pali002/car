@@ -9,9 +9,9 @@ class CarController extends Controller
 {
     public function insertAll() {
         DB::table("cars")->insert([
-            ["brand" => "BMW", "productyear" => 2017],
-            ["brand" => "Citroen", "productyear" => 2012],
-            ["brand" => "Audi", "productyear" => 2014],
+            ["brand" => "BMW", "productyear" => 2017, "color_id" => 1],
+            ["brand" => "Citroen", "productyear" => 2012, "color_id" => 1],
+            ["brand" => "Audi", "productyear" => 2014, "color_id" => 3],
         ]);
         DB::table("color")->insert([
             ["color" => "white"],
@@ -36,6 +36,4 @@ class CarController extends Controller
         echo "<pre>";
         print_r($cars);
     }
-
-    
 }

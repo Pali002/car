@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string("brand");
             $table->integer("productyear");
+            $table->foreignId("color_id");
             $table->timestamps();
         });
         Schema::create('color', function (Blueprint $table) {
